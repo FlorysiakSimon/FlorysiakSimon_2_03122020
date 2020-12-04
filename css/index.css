@@ -1,94 +1,243 @@
 body{
-    font-family:raleway, serif;
+    font-family:raleway, sans-serif;
+    width:75%;
+    margin: auto;
 }
 
-main{
-    max-width: 1440px;
-    margin: auto;
-    padding: 0 2rem;
-    box-sizing: border-box;
-    display:block;
-}
+
+
+
 
 /* NAVBAR */
 
-nav {
-    height: 70px;
-    line-height: 70px;
-    float:right;
-  }
- 
-  nav ul {
-     list-style: none;
-     width: 100%;
-  }
- 
- nav ul li {
-   display: inline-block;
-   margin-right: 0;
-   
-  }  
+.logo{
+padding-top:1em;
 
-  nav ul li .active {
-    border-top : 1px solid rgb(70, 120, 255);
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+float: left;
+text-align: center;
+color:black;
+padding: 40px 25px;
+text-decoration: none;
+font-size: 20px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+opacity:0.5;
+border-top : 4px solid #0065FC;
+color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  border-top : 4px solid #0065FC;
+  color:#0065FC;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+float: right;
+color:black;
+}
+
+
+#subscribe{
+    font-weight:bold;
+    color: #0065FC;
+}
+
+  /*SECTION SEARCH*/
+
+  
+  .searchTitle{
+    font-size:20px;
+    margin:0px;
   }
 
+  .searchForm{
+    display:inline-flex;
+  }
+  .searchForm i{
+    background-color:#F2F2F2;
+    padding:1em;
+    border-radius: 15px 0px 0px 15px;
+    width:10px;
+  }
+
+  .searchFormInput{
+    padding: 6px;
+    border-right: none;
+    border-left: none;
+    border-top: #F2F2F2 1px solid;
+    border-bottom: #F2F2F2 1px solid;
+    font-size: 17px;
+    width:220px;
+  }
+  .searchFormInput::placeholder{
+    color:black;
+    font-weight:bold;
+  }
+  .searchFormButton{
+    color:white;
+    background:#0065FC;
+    padding:1em;
+    border-radius:0px 15px 15px 0px;
+    font-weight:bold;
+    font-size:16px;
+    border:none;
+    cursor:pointer;
+  }
+
+  .searchFilter{
+    margin-top:2em;
+    margin-bottom:2em;
+    display:flex;
+  }
+
+  .searchFilterTitle{
+    margin: 0 2rem 1rem 0;
+    display: flex;
+    align-items: center;
+  }
+
+ .searchFilterChoice{
+   display:flex;
+   align-items: center;
+   border: 2px solid #d9d9d9;
+   border-radius: 2rem;
+   border-radius:25px;
+   font-size: 17px;
+   font-weight:bold;
+   margin:1em;
+   cursor:pointer;
+ }
+
+.searchFilterChoiceIcon{
+  font-size:1.5em;
+  border-radius: 50%;
+  background-color:#afe2faad;
+  color: #0065FC;
+  line-height: 2em;
+  width: 2em;
+  height: 2em;
+  margin-right:0.5em;
+  text-align: center;
+  display: inline-block;
+  transition:0.5s;
+}
+
+.searchFilterChoice:hover{
+  opacity:0.7;
+ color: black;
+}
+
+.searchFilterChoiceText{
+  margin-right:1em;
+}
+ 
+.searchText{
+  display:flex;
+}
+
+.searchTextIcon{
+
+  font-size:1.5em;
+  border-radius: 50%;
+  border: 1px solid #F2F2F2;
+  color: #0065FC;
+  line-height: 2em;
+  width: 2em;
+  height: 2em;
+  margin-right:0.5em;
+  text-align: center;
+  display: inline-block;
+}
 
  /* FLEXBOX */ 
  .hebergements{
      display:flex;
      justify-content: space-between;
-     margin: 0 auto;
-     width: 90%;
+     width: 100%;
 
  }
  
 .containerHebergement {
     /* We first create a flex layout context */
     display: flex;
-    width:70%;
+    flex-basis:70%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0;
-    margin: 0;
+    padding: 1em;
+    margin: 1em;
     background-color:#F2F2F2;
   }
+
   
-  .containerHebergementTitle{
+  
+  /*.containerHebergementTitle{
     margin: 0;
     display: flex;
-    justify-content: space-between;
-  }
+    flex-direction: column;
+  }*/
   
   .containerHebergementItem {
     padding: 5px;
-    width: 250px;
-    height: 250px;
+    border-radius:30px;
+    width: 300px;
+    height: 270px;
     background-color:white;
     text-align: left;
+    margin:1em;
   }
 
   .containerHebergementItem img{
-
+    object-fit: cover;
     height:150px;
-    width:200px;
+    width:300px;
+    border-radius:30px 30px 0px 0px;
+  }
+  .containerHebergementItem h2{
+    font-size: 20px;
+  }
+
+  .ContainerHebergementInfos{
+    margin-left:1em;
+  }
+
+  .fa-star{
+    color:#0065FC;
+  }
+
+  .empty{
+    color:#F2F2F2;
   }
 
 .populaires{
-    display:flex;
-}
+  display: flex;
+  flex-basis: 30%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+  margin: 1em;
+  background-color: #F2F2F2;}
 
   .containerPopulaires {
-    display: flex;
-    flex-direction: column;
-    background-color:#F2F2F2;
+    
   }
 
   .containerPopulairesItem {
+    display:flex;
     padding: 5px;
     width: 250px;
-    height: 250px;
     text-align: left;
   }
 
@@ -104,9 +253,34 @@ nav {
 
   /* FOOTER */
   footer {
-    background-color:#F2F2F2;
+    position:relative;
+    background:#F2F2F2;
+    height:300px;
+    bottom:0;
+    width:100%;
+    margin:0; padding:0;
+
   }
 
-  footer ul {
-      display:inline-block;
+  .footerContainer{
+    display:flex;
+
   }
+
+  .footerContainerCollumn{
+    display:flex;
+    flex-basis:30%;
+    flex-direction:column;
+    padding: 2em;
+  }
+
+  .footerContainerCollumnLink{
+    text-decoration:none;
+    color:black;
+    margin-top:1em;
+    margin-bottom:1em;
+  }
+  
+
+
+ 
