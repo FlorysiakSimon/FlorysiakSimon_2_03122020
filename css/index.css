@@ -74,7 +74,7 @@ a {
 .searchForm {
   display: inline-flex;
 }
-.searchForm i {
+.searchFormIconGps {
   background-color: #f2f2f2;
   padding: 1em;
   border-radius: 15px 0px 0px 15px;
@@ -107,7 +107,9 @@ a {
 .searchFormButton:hover {
   opacity: 0.5;
 }
-
+.searchFormButtonIcon {
+  display: none;
+}
 .searchFilter {
   margin-top: 2em;
   margin-bottom: 2em;
@@ -115,7 +117,7 @@ a {
 }
 
 .searchFilterTitle {
-  margin: 0 2rem 1rem 0;
+  margin: 0 2em 0 0;
   display: flex;
   align-items: center;
 }
@@ -124,8 +126,7 @@ a {
   display: flex;
   align-items: center;
   border: 2px solid #d9d9d9;
-  border-radius: 2rem;
-  border-radius: 25px;
+  border-radius: 2em;
   font-size: 17px;
   font-weight: bold;
   margin: 1em;
@@ -364,7 +365,6 @@ a {
 footer {
   position: relative;
   background: #f2f2f2;
-  height: 300px;
   bottom: 0;
   width: 100%;
   margin: 0;
@@ -391,4 +391,77 @@ footer {
 }
 .footerContainerCollumnLink:hover {
   text-decoration: underline;
+}
+
+/* RESPONSIVE TELEPHONE */
+
+@media screen and (max-width: 530px) {
+  main {
+    margin: 1em;
+  }
+
+  /*HEADER*/
+
+  .navbar a {
+    color: black;
+    border-top: none;
+    border-bottom: 4px solid white;
+    font-size: 20px;
+  }
+  .navbar a.active {
+    border-top: none;
+    border-bottom: 4px solid #0065fc;
+    color: #0065fc;
+  }
+  .navbar a:hover {
+    opacity: 0.5;
+    border-bottom: 4px solid #0065fc;
+    border-top: none;
+    color: black;
+  }
+  #subscribe {
+  }
+
+  /*SECTION SEARCH*/
+
+  .searchFormButton {
+    border-radius: 15px;
+  }
+  .searchFormButtonIcon {
+    display: inline-block;
+  }
+  .searchFormButtonText {
+    display: none;
+  }
+  /*SECTION HEBERGEMENTS*/
+
+  .hebergements {
+    flex-direction: column;
+  }
+
+  .populaires {
+    order: 1;
+  }
+  .containerHebergement {
+    order: 2;
+  }
+  /*SECTION ACTIVITES*/
+  .activity {
+    display: flex;
+    flex-direction: column;
+  }
+  .containerActivity {
+    margin: 2em;
+  }
+  .containerActivityImg {
+    position: inherit;
+    height: 200px;
+  }
+  /*FOOTER*/
+  .footerContainer {
+    flex-direction: column;
+  }
+  ..footerContainerCollumn {
+    padding: 2em 0em 0em;
+  }
 }
