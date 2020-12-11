@@ -526,7 +526,9 @@ footer {
 
 @media screen and (max-width: 769px) {
   /*SECTION HEBERGEMENTS*/
-
+  .containerPopulairesItem {
+    width: 100%;
+  }
   .containerHebergement {
     display: block;
   }
@@ -550,6 +552,7 @@ footer {
 
 /* RESPONSIV DESKTOP */
 @media screen and (max-width: 1440px) {
+  /*HEBERGEMENT*/
   .hebergements {
     flex-direction: column;
   }
@@ -564,13 +567,44 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
   }
   .containerPopulairesTitle {
     display: flex;
     margin-top: 0px;
     flex: 100%;
   }
+  .containerPopulairesItem {
+    max-width: 340px;
+  }
   .containerHebergement {
     order: 2;
+  }
+  /*ACTIVITES*/
+  .activity {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .containerActivity1 {
+    grid-row: 1/5;
+    grid-column: 1/2;
+  }
+  .containerActivity2 {
+    grid-row: 1/5;
+  }
+  .containerActivity3 {
+    grid-row: 5/7;
+    grid-column: 1/2;
+  }
+  .containerActivity4 {
+    grid-row: 5/7;
+    grid-column: 2/3;
+  }
+  .containerActivity5 {
+    grid-row: 1/5;
+    grid-column: 3/4;
+  }
+  .containerActivity6 {
+    grid-row: 5/7;
+    grid-column: 3/4;
   }
 }
