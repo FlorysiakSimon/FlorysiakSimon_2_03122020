@@ -201,7 +201,7 @@ a {
   flex-basis: 70%;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 1em;
   margin: 1em;
   background-color: #f2f2f2;
@@ -235,7 +235,7 @@ a {
   border-radius: 30px 30px 0px 0px;
 }
 .containerHebergementItem h2 {
-  font-size: 24px;
+  font-size: 20px;
   margin: 3px 0px 3px 0px;
 }
 
@@ -308,7 +308,7 @@ a {
   margin-left: 1em;
 }
 .containerPopulairesInfos h2 {
-  font-size: 24px;
+  font-size: 20px;
   margin: 10px 0px 0px 0px;
 }
 
@@ -527,7 +527,7 @@ footer {
 @media screen and (max-width: 769px) {
   /*SECTION HEBERGEMENTS*/
   .containerPopulairesItem {
-    width: 100%;
+    width: 90%;
   }
   .containerHebergement {
     display: block;
@@ -564,18 +564,18 @@ footer {
     flex-direction: row;
   }
   .containerPopulaires {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
     justify-content: space-around;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
   }
   .containerPopulairesTitle {
     display: flex;
-    margin-top: 0px;
+    grid-column: 1/-1;
+    margin: 1em 0em 1em 0em;
     flex: 100%;
   }
   .containerPopulairesItem {
-    max-width: 340px;
   }
   .containerHebergement {
     order: 2;
@@ -606,5 +606,12 @@ footer {
   .containerActivity6 {
     grid-row: 5/7;
     grid-column: 3/4;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .containerPopulaires {
+    display: flex;
+    flex-direction: column;
   }
 }
