@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
 body {
-  font-family: raleway, sans-serif;
+  font-family: Raleway, sans-serif;
   margin: auto;
+  color: red;
 }
 main {
   max-width: 1680px;
@@ -18,8 +19,6 @@ a {
 .searchFilterChoice:hover,
 .containerActivity:hover,
 .containerActivitySmall:hover {
-  -ms-transform: scale(1.05); /* IE 9 */
-  -webkit-transform: scale(1.05); /* Safari 3-8 */
   transform: scale(1.05);
 }
 /* NAVBAR */
@@ -196,7 +195,6 @@ a {
 }
 
 .containerHebergement {
-  /* We first create a flex layout context */
   display: flex;
   flex-basis: 70%;
   flex-direction: row;
